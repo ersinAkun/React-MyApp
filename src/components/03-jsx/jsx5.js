@@ -18,9 +18,6 @@ const Jsx5 = () => {
             <select>
               { cities.map( (city, i)=> <option key={i} >{city}</option>  ) }
 
-
-              
-
               </select>
 
 
