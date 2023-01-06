@@ -38,7 +38,7 @@ const App = () => {
              <Greetings/>
              <Products/>
        */}   
-              <Clock2/>
+              <Clock2 textColor="#56ff33" bgColor="#0012C3"/>
            
    </div>
 

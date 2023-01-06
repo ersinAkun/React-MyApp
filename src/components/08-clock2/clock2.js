@@ -2,9 +2,13 @@ import moment from "moment/moment";
 import React from "react";
 import "./clock2.scss";
 
-const Clock2 = () => {
+const Clock2 = (props) => {
+
   const dateTime = moment();
   //require('moment/locale/tr');
+
+  const {textColor, bgColor} = props;
+
   const timeStr = dateTime.format("HH:mm");
   const dateStr = dateTime.format("LL");
   const dayStr = dateTime.format("dddd");
@@ -21,8 +25,18 @@ const Clock2 = () => {
   } else {
     message = "Night";
   }
+
+
+  const clockStyle = {
+    backgroundColor: bgColor,
+    color: textColor
+  }
+
+
+
+
   return (
-    <div className="clock-container">
+    <div className="clock-container" style={clockStyle}>
       <div className="time">{timeStr}</div>
       <div>
         <div className="date">{dateStr}</div>
