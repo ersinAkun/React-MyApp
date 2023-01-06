@@ -11,12 +11,15 @@ import Style3 from "./components/04-styles/style3";
 import Style4 from "./components/04-styles/style4";
 import Clock1 from "./components/05-clock1/clock1";
 import Greetings from "./components/06-props-1/greetings";
+import ProductCard from "./components/07-props-2/product-card";
+import Products from "./components/07-props-2/products";
+import Clock2 from "./components/08-clock2/clock2";
 
 
 
 const App = () => {
 
-  
+
   return (
     <div>
       
@@ -32,8 +35,10 @@ const App = () => {
              <Style3/>
              <Style4/>
              <Clock1/>
-       */}   
              <Greetings/>
+             <Products/>
+       */}   
+              <Clock2/>
            
    </div>
 

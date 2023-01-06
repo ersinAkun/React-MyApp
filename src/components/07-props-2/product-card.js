@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 import "./card.scss";
 
-const ProductCard = () => {
-  return (
-    <div>Card</div>
-  )
-}
+const ProductCard = (props) => {
 
-export default ProductCard
+  return <div className="product-card">
+    {props.children}
+    </div>;
+};
+export default ProductCard;
