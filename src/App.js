@@ -14,6 +14,7 @@ import Greetings from "./components/06-props-1/greetings";
 import ProductCard from "./components/07-props-2/product-card";
 import Products from "./components/07-props-2/products";
 import Clock2 from "./components/08-clock2/clock2";
+import Image from "./components/09-image/image";
 
 
 
@@ -37,8 +38,9 @@ const App = () => {
              <Clock1/>
              <Greetings/>
              <Products/>
+            <Clock2 textColor="#56ff33" bgColor="#0012C3"/>
        */}   
-              <Clock2 textColor="#56ff33" bgColor="#0012C3"/>
+             <Image/>
            
    </div>
 
