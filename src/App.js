@@ -45,7 +45,7 @@ const App = () => {
             <Gallery/>
        
        */}   
-           <ProfileCard/>
+          <ProfileCard avatar="profile.jpg" name="Ali Gel" location="Turkey, Istanbul" shot="3" followers="23432" following="234"/>
 
    </div>
 
