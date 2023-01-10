@@ -19,6 +19,7 @@ import Image from "./components/09-image/image";
 import ProfileCard from "./components/10-profile-card/profile-card";
 import BootstrapStatic from "./components/11-bootstrap/bootstrap-static";
 import BootstrapDynamic from "./components/11-bootstrap/bootstrap-dynamic";
+import Icon from "./components/12-icons/icon";
 
 
 
@@ -47,10 +48,10 @@ const App = () => {
             <Gallery/>
             <ProfileCard avatar="profile.jpg" name="Esin AKUN" location="Turkei, Istanbul" shot="3" followers="23432" following="234"/>
             <BootstrapStatic/>
-       
-       */}   
-
             <BootstrapDynamic/>
+       
+          */}   
+            <Icon/>
 
 
    </div>
