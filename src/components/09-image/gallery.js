@@ -1,7 +1,10 @@
 import React from "react";
 import "./gallery.scss";
 import images from "./images.json";
+
+
 const c = "gallery";
+
 const Gallery = () => {
   return (
     <div className={`${c} row`}>

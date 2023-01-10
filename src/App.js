@@ -17,6 +17,8 @@ import Clock2 from "./components/08-clock2/clock2";
 import Gallery from "./components/09-image/gallery";
 import Image from "./components/09-image/image";
 import ProfileCard from "./components/10-profile-card/profile-card";
+import BootstrapStatic from "./components/11-bootstrap/bootstrap-static";
+import BootstrapDynamic from "./components/11-bootstrap/bootstrap-dynamic";
 
 
 
@@ -43,9 +45,13 @@ const App = () => {
             <Clock2 textColor="#56ff33" bgColor="#0012C3"/>
             <Image/>
             <Gallery/>
+            <ProfileCard avatar="profile.jpg" name="Esin AKUN" location="Turkei, Istanbul" shot="3" followers="23432" following="234"/>
+            <BootstrapStatic/>
        
        */}   
-          <ProfileCard avatar="profile.jpg" name="Ali Gel" location="Turkey, Istanbul" shot="3" followers="23432" following="234"/>
+
+            <BootstrapDynamic/>
+
 
    </div>
 
