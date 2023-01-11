@@ -6,10 +6,10 @@ const PersonCard = ({ image, name, age }) => {
   return (
     <Card>
       <Row>
-        <Col md={4}>
+        <Col md={2}>
           <Card.Img src={require(`./images/${image}`)} />
         </Col>
-        <Col md={8}>
+        <Col md={10}>
           <Card.Body>
             <Card.Title>{name}</Card.Title>
             <Card.Subtitle>{age}</Card.Subtitle>

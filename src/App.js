@@ -27,6 +27,7 @@ import Stateless from "./components/15-usestate/stateless";
 import State from "./components/15-usestate/state";
 import { Button } from "react-bootstrap";
 import Counter from "./components/16-counter/counter";
+import Birthday from "./components/17-birthday/birthday";
 
 
 
@@ -62,10 +63,10 @@ const App = () => {
             <Jsx7/>
             <Stateless/>
             <State/>
+            <Counter/>
        
           */}   
-
-            <Counter/>
+            <Birthday/>
 
    </div>
 
