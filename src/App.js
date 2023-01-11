@@ -22,6 +22,8 @@ import BootstrapDynamic from "./components/11-bootstrap/bootstrap-dynamic";
 import Icon from "./components/12-icons/icon";
 import Events from "./components/13-events/events";
 import Shop from "./components/14-products/shop";
+import Jsx7 from "./components/03-jsx/jsx7";
+import Stateless from "./components/15-usestate/stateless";
 
 
 
@@ -53,9 +55,14 @@ const App = () => {
             <BootstrapDynamic/>
             <Icon/>
             <Events/>
+            <Shop/>
+            <Jsx7/>
        
           */}   
-            <Shop/>
+            <Stateless/>
+
+
+
    </div>
 
   )
