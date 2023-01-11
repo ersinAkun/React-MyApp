@@ -43,7 +43,14 @@
   },
   {
     "id": "7",
-    "image": "product3.jpg",
+    "image": "product7.jpg",
+    "title": "Sony ABC",
+    "desc": "Wireless Industry Leading Noise Canceling",
+    "price": 125
+  },
+  {
+    "id": "8",
+    "image": "product8.png",
     "title": "Sony ABC",
     "desc": "Wireless Industry Leading Noise Canceling",
     "price": 125

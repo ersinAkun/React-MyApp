@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Container, Form, Nav, Navbar } from "react-bootstrap";
+
 const Header = () => {
   return (
     <Navbar bg="light" expand="lg">
@@ -8,7 +9,7 @@ const Header = () => {
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
-            className="me-auto my-2 my-lg-0"
+            className="mx-auto my-2 my-lg-0"
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
@@ -32,4 +33,5 @@ const Header = () => {
     </Navbar>
   );
 };
+
 export default Header;
