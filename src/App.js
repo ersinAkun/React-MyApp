@@ -24,6 +24,9 @@ import Events from "./components/13-events/events";
 import Shop from "./components/14-products/shop";
 import Jsx7 from "./components/03-jsx/jsx7";
 import Stateless from "./components/15-usestate/stateless";
+import State from "./components/15-usestate/state";
+import { Button } from "react-bootstrap";
+import Counter from "./components/16-counter/counter";
 
 
 
@@ -57,11 +60,12 @@ const App = () => {
             <Events/>
             <Shop/>
             <Jsx7/>
+            <Stateless/>
+            <State/>
        
           */}   
-            <Stateless/>
 
-
+            <Counter/>
 
    </div>
 
