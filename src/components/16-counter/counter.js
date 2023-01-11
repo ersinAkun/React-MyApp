@@ -13,7 +13,7 @@ const Counter = () => {
     if (val < 0) val = 0;
     setCounter(val);
   };
-  
+
   return (
     <ButtonGroup aria-label="Basic example">
       <Button variant="info" onClick={() => handleClick(counter + 1)}>
@@ -22,10 +22,10 @@ const Counter = () => {
       <Button variant="light" disabled>
         {counter}
       </Button>
-      <Button variant="warning" onClick={() => handleClick(counter - 1)}>
+      <Button variant="warning" onClick={() => handleClick(counter - 1)} disabled={!counter}>
         <AiOutlineMinusCircle />
       </Button>
-      <Button variant="danger" onClick={() => handleClick(0)}>
+      <Button variant="danger" onClick={() => handleClick(0)} disabled={!counter}>
         <GrPowerReset />
       </Button>
     </ButtonGroup>
