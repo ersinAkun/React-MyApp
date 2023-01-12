@@ -14,7 +14,9 @@ const Jsx7 = ({ rate = 3 }) => {
   return (
     <div>
       {/* arr.join("") */}
-      {[...new Array(5)].map((item, index) => (index < rate ? "O" : "X"))}
+      {[...new Array(5)].map((item, index) => (
+      <span key= {index} > {index < rate ? "O"  : "X"} </span>
+      ))}
     </div>
   );
 };
