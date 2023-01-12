@@ -28,6 +28,7 @@ import State from "./components/15-usestate/state";
 import { Button } from "react-bootstrap";
 import Counter from "./components/16-counter/counter";
 import Birthday from "./components/17-birthday/birthday";
+import UseEffect from "./components/18-useeffect/useeffect";
 
 
 
@@ -64,9 +65,10 @@ const App = () => {
             <Stateless/>
             <State/>
             <Counter/>
+            <Birthday/>
        
           */}   
-            <Birthday/>
+          <UseEffect/>
 
    </div>
 

@@ -1,27 +1,33 @@
-import React, { useState } from 'react';
-import { Button, Container } from 'react-bootstrap';
+import React, { useState } from "react";
+import { Button, Container } from "react-bootstrap";
 import data from "./people.json";
-import PersonCard from './person-card';
+import PersonCard from "./person-card";
 
 const Birthday = () => {
-    const [people, setPeople] = useState(data);
+  const [people, setPeople] = useState(data);
 
-
+  const deletePerson = (id) => { 
+    const arr = people.filter( (item)=> item.id !== id );  
+    setPeople(arr);
+   }
 
   return (
     <Container>
-        <h1>Bugun Doganlar</h1>
-        <p>Bugun dogan {people.length} kisi bulundu</p>
+      <h1>Bugün Doğanlar</h1>
+      <p>Bugün doğan {people.length} kişi bulundu</p>
 
-        {people.map((item)=> <PersonCard {...item} key={item.id}/>)}
-        <Button variant="danger" onClick={()=> setPeople([])}>
-        RemoveAll
-        </Button>
-        <Button variant="success" onClick={()=> setPeople(data)}>
-        Reload Data
-        </Button>
+      {people.map((item) => (
+        <PersonCard {...item} key={item.id} deletePerson={deletePerson}/>
+      ))}
+
+      <Button variant="danger" onClick={() => setPeople([])}>
+        Remove All
+      </Button>
+      <Button variant="success" onClick={() => setPeople(data)}>
+        ReLoad Data
+      </Button>
     </Container>
-  )
-}
+  );
+};
 
-export default Birthday
+export default Birthday;
