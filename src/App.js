@@ -31,6 +31,7 @@ import Birthday from "./components/17-birthday/birthday";
 import UseEffect1 from "./components/18-useeffect/useeffect1";
 import Clock3 from "./components/19-clock3/clock3";
 import UseEffect2 from "./components/18-useeffect/useeffect2";
+import CountryFilter from "./components/20-country-filter/country-filter";
 
 
 
@@ -70,13 +71,13 @@ const App = () => {
             <Birthday/>
             <UseEffect1/>
             <Clock3/>
+            <UseEffect2/>
            
            
             
           */}   
-             <UseEffect2/>
 
-
+            <CountryFilter/>
 
 
 
