@@ -34,6 +34,7 @@ import UseEffect2 from "./components/18-useeffect/useeffect2";
 import CountryFilter from "./components/20-country-filter/country-filter";
 import UseRef from "./components/21-useresf/useref";
 import Scroll from "./components/21-useresf/scroll";
+import ClassComp from "./components/22-class-typr-component/class-comp";
 
 
 
@@ -79,9 +80,9 @@ const App = () => {
             <CountryFilter/>
             <Birthday/>
             <UseRef/>
-          */}   
             <Scroll/>
-
+          */}   
+          <ClassComp/>
 
    </div>
 
