@@ -2,14 +2,12 @@ import React from "react";
 import { Card } from "react-bootstrap";
 
 
-
 const UserCard = (props) => {
-    
-  const { id, firstName, lastName, email, avatar } = props;
 
+  const { id, firstName, lastName, email, avatar } = props;
   
   return (
-    <Card>
+    <Card className="h-100">
       <Card.Img variant="top" src={avatar} />
       <Card.Body>
         <Card.Title>
