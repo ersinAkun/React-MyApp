@@ -35,6 +35,7 @@ import CountryFilter from "./components/20-country-filter/country-filter";
 import UseRef from "./components/21-useresf/useref";
 import Scroll from "./components/21-useresf/scroll";
 import ClassComp from "./components/22-class-typr-component/class-comp";
+import UserCards from "./components/23-fetch-users/user-cards";
 
 
 
@@ -81,8 +82,11 @@ const App = () => {
             <Birthday/>
             <UseRef/>
             <Scroll/>
-          */}   
           <ClassComp/>
+          */}   
+          <UserCards/>
+
+
 
    </div>
 
