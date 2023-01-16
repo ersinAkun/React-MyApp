@@ -39,6 +39,8 @@ import UserCards from "./components/23-fetch-users/user-cards";
 import Countries from "./components/24-axios-countries/countries";
 import ParentComp from "./components/25-child-to-parent/parent-comp";
 import Form1 from "./components/26-forms/form1";
+import Form2 from "./components/26-forms/form2";
+import Form3 from "./components/26-forms/form3";
 
 
 
@@ -89,9 +91,12 @@ const App = () => {
           <UserCards/>
           <Countries/>
           <ParentComp/>
+          <Form1/>          
+          <Form2/>  
           
         */}   
-        <Form1/>          
+          <Form3/>
+
 
    </div>
 
