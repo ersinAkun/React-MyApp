@@ -3,39 +3,29 @@ import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 import Country from "./country";
 
-
 const Countries = () => {
+
   const [countries, setCountries] = useState([]);
   const [loading, setLoading] = useState(true);
-
-
+  
   const loadData = async () => {
-    try{
+    try {
       const resp = await axios.get("https://restcountries.com/v3.1/all");
-     
-      const arr = resp.data.map((item)=> {
-        return{
-          flag: item.flags.png,
-          name: item.name.common,
-          population: item.population,
-          capital: item.capital.join("-")
-        }
-      })  
-     
-     
-     
+      
+      console.log(Object.keys(resp.data[0].currencies));
+      const arr = resp.data.map((item) => ({
+        flag: item.flags.png,
+        name: item.name.common,
+        population: item.population,
+        capital: item.capital?.join("-")      }));
       setCountries(arr);
-
-    }catch(err){
-        console.log(err);
+    } catch (err) {
+      console.log(err);
     }
   };
-
-
   useEffect(() => {
     loadData();
   }, []);
-
   return (
     <Table striped bordered hover>
       <thead>
@@ -46,14 +36,12 @@ const Countries = () => {
           <th>Population</th>
           <th>Capital</th>
           <th>Curency</th>
-
         </tr>
       </thead>
-
       <tbody>
-          {countries.map(()=>(
-             <Country/> 
-          ))}  ;
+        {countries.map((item) => (
+          <Country {...item} key={item.name} />
+        ))}
       </tbody>
     </Table>
   );
