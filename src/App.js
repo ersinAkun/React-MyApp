@@ -38,6 +38,7 @@ import ClassComp from "./components/22-class-typr-component/class-comp";
 import UserCards from "./components/23-fetch-users/user-cards";
 import Countries from "./components/24-axios-countries/countries";
 import ParentComp from "./components/25-child-to-parent/parent-comp";
+import Form1 from "./components/26-forms/form1";
 
 
 
@@ -87,10 +88,10 @@ const App = () => {
           <ClassComp/>
           <UserCards/>
           <Countries/>
+          <ParentComp/>
           
         */}   
-        <ParentComp/>
-          
+        <Form1/>          
 
    </div>
 
