@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { Container, Form } from 'react-bootstrap'
 const Form3 = () => {
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [email, setEmail] = useState("");
-    const [phone, setPhone] = useState("");
+    const [formData, setFormData] = useState({
+        firstName:"",lastName:"",email:"",phone:""
+    });
+    console.log(formData);
   return (
     <Container className="mt-5">
       <Form>
@@ -13,8 +13,8 @@ const Form3 = () => {
           <Form.Control
             type="text"
             placeholder="Adınızı giriniz"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
+            value={formData.firstName}
+            onChange={(e) => setFormData({...formData, firstName: e.target.value})}
           />
         </Form.Group>
         <Form.Group className="mb-3">
@@ -22,8 +22,8 @@ const Form3 = () => {
           <Form.Control
             type="text"
             placeholder="Soyadınızı giriniz"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
+            value={formData.lastName}
+            onChange={(e) => setFormData({...formData, lastName: e.target.value})}
           />
         </Form.Group>
         <Form.Group className="mb-3">
@@ -31,8 +31,8 @@ const Form3 = () => {
           <Form.Control
             type="email"
             placeholder="Epostanızı giriniz"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={formData.email}
+            onChange={(e) => setFormData({...formData, email: e.target.value})}
           />
         </Form.Group>
         <Form.Group>
@@ -40,8 +40,8 @@ const Form3 = () => {
           <Form.Control
             type="text"
             placeholder="Telefonunuzu giriniz"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
+            value={formData.phone}
+            onChange={(e) => setFormData({...formData, phone: e.target.value})}
           />
         </Form.Group>
       </Form>
