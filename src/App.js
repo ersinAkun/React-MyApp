@@ -37,6 +37,7 @@ import Scroll from "./components/21-useresf/scroll";
 import ClassComp from "./components/22-class-typr-component/class-comp";
 import UserCards from "./components/23-fetch-users/user-cards";
 import Countries from "./components/24-axios-countries/countries";
+import ParentComp from "./components/25-child-to-parent/parent-comp";
 
 
 
@@ -85,10 +86,10 @@ const App = () => {
             <Scroll/>
           <ClassComp/>
           <UserCards/>
+          <Countries/>
           
         */}   
-        <Countries/>
-
+        <ParentComp/>
           
 
    </div>
