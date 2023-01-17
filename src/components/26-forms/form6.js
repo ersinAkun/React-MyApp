@@ -11,7 +11,9 @@ const Form6 = () => {
   };
 
   const validationSchema = Yup.object({
-    email: Yup.string().email("Geçerli bir eposta giriniz").required("Boş geçmeyiniz"),
+    email: Yup.string()
+      .email("Geçerli bir eposta giriniz")
+      .required("Boş geçmeyiniz"),
     password: Yup.string().required("Şifrenizi giriniz"),
   });
 
@@ -34,7 +36,8 @@ const Form6 = () => {
             type="email"
             placeholder="Enter email"
             {...formik.getFieldProps("email")}
-            isInvalid={formik.errors.email}
+            isInvalid={formik.touched.email && !!formik.errors.email}
+            isValid={formik.touched.email && !formik.errors.email}
           />
 
           <Form.Control.Feedback type="invalid">
@@ -47,7 +50,8 @@ const Form6 = () => {
             type="password"
             placeholder="Password"
             {...formik.getFieldProps("password")}
-            isInvalid={formik.errors.password}
+            isInvalid={formik.touched.password && !!formik.errors.password}
+            isValid={formik.touched.password && !formik.errors.password}
           />
 
           <Form.Control.Feedback type="invalid">
@@ -60,7 +64,7 @@ const Form6 = () => {
             label="Check me out"
             {...formik.getFieldProps("remember")}
           />
-          
+
         </Form.Group>
         <Button variant="primary" type="submit">
           Submit
@@ -69,4 +73,5 @@ const Form6 = () => {
     </Container>
   );
 };
+
 export default Form6;
