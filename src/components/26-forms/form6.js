@@ -3,48 +3,65 @@ import React from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import * as Yup from "yup";
 
-
-
 const Form6 = () => {
+  const initialValues = {
+    email: "",
+    password: "",
+    remember: false,
+  };
 
-    const initialValues ={
-        email:"",
-        password:"",
-        remember:false
-    }
-    
-    const validationSchema = Yup.object({
-        email: Yup.string().email().required("Gecerli bir email giriniz"),
-        password: Yup.string().required("Sifrenizi giriniz")
-    });
+  const validationSchema = Yup.object({
+    email: Yup.string().email("Geçerli bir eposta giriniz").required("Boş geçmeyiniz"),
+    password: Yup.string().required("Şifrenizi giriniz"),
+  });
 
-    const onSubmit = (values) =>{
-        console.log(values);
-    }
+  const onSubmit = (values) => {
+    console.log(values);
+  };
 
-    const formik = useFormik({
-        initialValues,
-        validationSchema,
-        onSubmit
-    })
+  const formik = useFormik({
+    initialValues,
+    validationSchema,
+    onSubmit,
+  });
 
   return (
     <Container className="mt-5">
       <Form noValidate onSubmit={formik.handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
-        </Form.Group>
+          <Form.Control
+            type="email"
+            placeholder="Enter email"
+            {...formik.getFieldProps("email")}
+            isInvalid={formik.errors.email}
+          />
 
+          <Form.Control.Feedback type="invalid">
+            {formik.errors.email}
+          </Form.Control.Feedback>
+        </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
-        </Form.Group>
+          <Form.Control
+            type="password"
+            placeholder="Password"
+            {...formik.getFieldProps("password")}
+            isInvalid={formik.errors.password}
+          />
 
+          <Form.Control.Feedback type="invalid">
+            {formik.errors.password}
+          </Form.Control.Feedback>
+        </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
+          <Form.Check
+            type="checkbox"
+            label="Check me out"
+            {...formik.getFieldProps("remember")}
+          />
+          
         </Form.Group>
-
         <Button variant="primary" type="submit">
           Submit
         </Button>
