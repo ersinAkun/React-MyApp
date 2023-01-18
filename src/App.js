@@ -48,11 +48,14 @@ import Form3 from "./components/26-forms/form3";
 import Form4 from "./components/26-forms/form4";
 import Form5 from "./components/26-forms/form5";
 import Form6 from "./components/26-forms/form6";
+import Exchange from "./components/27-context-api/exchange";
 import StoreContext from "./store";
 const App = () => {
   const [counter, setCounter] = useState(10);
+  const [currencies, setCurrencies] = useState({});
+  
   return (
-    <StoreContext.Provider value={{counter}}>
+    <StoreContext.Provider value={{counter, setCounter, currencies}}>
       <BrowserRouter>
         <Header />
         <Container fluid>
@@ -125,6 +128,7 @@ const App = () => {
                 <Route path="/form4" element={<Form4 />} />
                 <Route path="/form5" element={<Form5 />} />
                 <Route path="/form6" element={<Form6 />} />
+                <Route path="/exchange" element={<Exchange />} />
               </Routes>
             </Col>
           </Row>
