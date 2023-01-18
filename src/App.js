@@ -1,6 +1,7 @@
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Await, BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/00-home/header/header";
 import Menu from "./components/00-home/menu/menu";
 import HelloWorld from "./components/01-hello-world/hello-world";
@@ -54,6 +55,26 @@ const App = () => {
   const [counter, setCounter] = useState(10);
   const [currencies, setCurrencies] = useState({});
   
+
+  const loadData = async ( ) => {
+
+    try{
+      const resp = await axios.get("https://api.frankfurter.app/latest?from=TRY");
+      setCurrencies(resp.data.rates);
+    }catch (error){
+        console.log(error);
+    }
+  }
+
+  useEffect(() => {
+    loadData();
+  }, [])
+  
+
+
+
+
+
   return (
     <StoreContext.Provider value={{counter, setCounter, currencies}}>
       <BrowserRouter>
