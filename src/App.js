@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { Await, BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/00-home/header/header";
 import Menu from "./components/00-home/menu/menu";
 import HelloWorld from "./components/01-hello-world/hello-world";
@@ -69,14 +69,10 @@ const App = () => {
     loadData();
   }, [])
   
-  
-
-
-
 
 
   return (
-    <StoreContext.Provider value={{counter, setCounter, currencies}}>
+    <StoreContext.Provider  value={{counter, setCounter, currencies}}>
       <BrowserRouter>
         <Header />
         <Container fluid>
