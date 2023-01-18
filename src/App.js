@@ -51,24 +51,24 @@ import Form5 from "./components/26-forms/form5";
 import Form6 from "./components/26-forms/form6";
 import Exchange from "./components/27-context-api/exchange";
 import StoreContext from "./store";
+
 const App = () => {
   const [counter, setCounter] = useState(10);
   const [currencies, setCurrencies] = useState({});
-  
 
-  const loadData = async ( ) => {
-
-    try{
+  const loadData = async () => { 
+    try {
       const resp = await axios.get("https://api.frankfurter.app/latest?from=TRY");
       setCurrencies(resp.data.rates);
-    }catch (error){
-        console.log(error);
+    } catch (err) {
+      console.log(err)
     }
   }
 
   useEffect(() => {
     loadData();
   }, [])
+  
   
 
 
